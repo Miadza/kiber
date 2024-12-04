@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="background">
+        <img class="img1" src="./image/chair.svg" alt="" />
+        <img class="img2" src="./image/back.svg" alt="" />
+      </div>
+      <div class="container">
+        <div class="navigation">
+          <div class="nav">
+            <a href="#">Главная</a>
+            <a href="#">Зоны</a>
+            <a href="#">Цены</a>
+            <a href="#">Фото</a>
+            <a href="#">Акции</a>
+            <a href="#">Контакты</a>
+          </div>
+          <div class="registration">
+            <a id="reg" href="registration.html">Войти</a>
+          </div>
+        </div>
+        <div class="text-header">
+          <div class="logo-text">
+            <img src="./image/head.svg" alt="" />
+          </div>
+          <div class="text-rostov">
+            <h1>Кибертека</h1>
+            <p>Ростов-на-Дону</p>
+          </div>
+        </div>
+        <div class="text-button">
+          <p>Работаем круглосуточно</p>
+          <p>8 928 136 37 02</p>
+          <div class="button-header">
+            <a href="#">Забронировать!</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="background-main">
+        <img class="img-main" src="./image/GEO-TERRAIN4-20 1.svg" alt="" />
+      </div>
+      <div class="text-main">
+        <h1 class="main-text-h1">Разные зоны с разными условиями</h1>
+      </div>
+      <div class="cards">
+        <div class="cardone">
+          <p class="other-us">Игровой ПК и переферия</p>
+          <p class="text-nab-card">Стандарт</p>
+          <img class="img-card-purple" src="./image/card1.svg" alt="" />
+          <p class="zone">Общая зона</p>
+          <p class="last-text-card-purple">Подробнее</p>
+        </div>
+        <div class="cardone">
+          <p class="other-us">Игровой ПК и переферия</p>
+          <p class="text-nab-card">Стандарт</p>
+          <img class="img-card-aqua" src="./image/card2.svg" alt="" />
+          <p class="zone">Общая зона</p>
+          <p class="last-text-card-aqua">Подробнее</p>
+        </div>
+        <div class="cardone">
+          <p class="other-us">Игровой ПК и переферия</p>
+          <p class="text-nab-card">Стандарт</p>
+          <img class="img-card-blue" src="./image/card3.svg" alt="" />
+          <p class="zone">Общая зона</p>
+          <p class="last-text-card-blue">Подробнее</p>
+        </div>
+      </div>
+      <div class="background-stocks"></div>
+      <div class="stocks">
+        <h1>Акции и скидки на любой вкус</h1>
+      </div>
+      <div class="promokod">
+        <div class="promone">
+            <p class="promon">Промокод Cyber</p>
+            <p class="promonn">Киберфикация</p>
+            <p class="promonnn">Киберфикация</p>
+          </div>
+          <div class="promtwo">
+            <p class="promtw">Промокод Cyber</p>
+            <p class="promtww">Киберфикация</p>
+          </div>
+          <div class="prothree">
+            <p class="promth">Промокод Cyber</p>
+            <p class="promothh">Киберфикация</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="background-main">
+        <img class="img-main" src="./image/GEO-TERRAIN4-20 1.svg" alt="" />
+      </div>
+      <div class="cards">
+        <div class="card-search">
+          <p class="how-search">Как нас найти</p>
+        <div class="adr-tel">
+          <div class="adrr">
+            <p class="adres">Адрес: </p> <div class="adr"><p>Пушкинская 120/2</p></div>
+          </div>
+          <div class="tell">
+            <p class="telephone">Телефон: <div class="tel"> <p> +7 977 320 88 88</p></div></p>
+          </div>
+        </div>
+          <div class="button-br">
+            <a href="#">Забронировать!</a>
+          </div>
+        </div>
+        <div class="">
+          <img src="./image/map.svg" alt="">
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    document.querySelector('.enter').addEventListener('click', async () => {
+      const username = document.querySelector('input[placeholder="Username"]').value;
+      const password = document.querySelector('input[placeholder="Password"]').value;
+  
+      const response = await fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+  
+      if (response.ok) {
+        const user = await response.json();
+        document.querySelector('#reg').innerText = 'Вы в аккаунте';
+      } else {
+        alert('Login failed.');
+      }
+    });
+  </script>
+  
+</html>

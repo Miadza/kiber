@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  margin-bottom: 420px;
+}
+
+.header {
+  margin-bottom: 95px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 1400px;
+}
+.background {
+  position: relative; /* изменено на relative */
+  width: 100%;
+}
+
+.background img {
+  position: absolute; /* изменено на absolute */
+  width: 100%;
+  height: auto; /* автоматическая высота при сохранении пропорций */
+}
+
+.img1 {
+  z-index: 2;
+  opacity: 75%;
+}
+
+.img2 {
+  z-index: 1; /* измените на 2, чтобы она была сверху img1 */
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+  position: relative;
+  z-index: 3; /* новый z-index, чтобы навигация была выше изображений */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.registration a {
+  color: #e637b7;
+}
+
+#reg:hover {
+  background-color: #e637b7;
+  color: #fff;
+}
+
+#reg {
+  color: #e637b7;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.registration a {
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 15px 20px 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.text-header {
+  position: relative;
+  z-index: 4;
+  padding-top: 320px;
+  display: flex;
+}
+
+.text-rostov {
+  padding-left: 35px;
+}
+
+.text-rostov h1 {
+  color: #fff;
+  width: 60%;
+  font-size: 72px;
+}
+
+.text-rostov p {
+  color: #fff;
+  font-size: 64px;
+}
+
+.text-button {
+  z-index: 5;
+  position: relative;
+  color: #fff;
+  padding-top: 20px;
+  font-size: 34px;
+}
+
+.text-button p {
+  margin-top: 10px;
+}
+
+.button-header {
+  margin-top: 80px;
+  border: 1px solid #fff;
+  width: 25%;
+  height: 70px;
+
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.button-header a {
+  text-decoration: none;
+  color: #e73ab8;
+}
+
+/* MAIN */
+
+.background-main {
+  position: relative; /* изменено на relative */
+  width: 100%;
+}
+
+.background-main img {
+  position: absolute; /* изменено на absolute */
+  width: 100%;
+  background-color: #1f1f1f;
+  height: auto; /* автоматическая высота при сохранении пропорций */
+}
+
+.img-main {
+  z-index: 1;
+}
+
+.main-text-h1 {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.text-main {
+  z-index: 3;
+  position: relative;
+  padding-top: 80px;
+}
+
+.cards {
+  display: flex;
+  padding-top: 150px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 70px;
+  z-index: 3;
+  position: relative;
+}
+
+.cardone {
+  width: 450px;
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+  padding: 50px;
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.text-nab-card {
+  font-size: 46px;
+}
+
+.other-us {
+  opacity: 30%;
+}
+
+.last-text-card-purple {
+  font-size: 20px;
+  color: #e637b7;
+}
+
+.last-text-card-aqua {
+  font-size: 20px;
+  color: #149ef2;
+}
+
+.last-text-card-blue {
+  font-size: 20px;
+  color: #3a4eff;
+}
+
+.img-card-purple {
+  border: 1px solid #e637b7;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.img-card-aqua {
+  border: 1px solid #149ef2;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 10px;
+}
+.img-card-blue {
+  border: 1px solid #3a4eff;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.zone {
+  font-size: 30px;
+}
+
+.stocks {
+  padding-top: 240px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+.background-stocks {
+  margin-top: 150px;
+  position: absolute; /* изменено на relative */
+  width: 100%;
+  background-color: #0e0e0e;
+  z-index: 1;
+  height: 100%;
+}
+
+.promokod {
+  display: flex;
+  position: relative;
+  z-index: 3;
+  justify-content: center;
+  color: #fff;
+  /* padding-top: 150px; */
+}
+
+.promon {
+  border: 1px solid black;
+  background-color: #1b1b1b;
+  border-radius: 15px;
+  padding: 120px;
+  /* margin: 20px; */
+}
+
+.promonn {
+  border: 1px solid black;
+  background-color: #1b1b1b;
+  border-radius: 15px;
+  padding: 120px;
+  /* margin: 20px; */
+}
+
+.promonnn {
+  border: 1px solid black;
+  background-color: #1b1b1b;
+  border-radius: 15px;
+  padding: 120px;
+  /* margin: 20px; */
+}
+
+.promone {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.promtwo {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.promtw {
+  border: 1px solid #1b1b1b;
+  border-radius: 15px;
+  padding: 80px;
+  height: 350px;
+  background-color: #1b1b1b;
+  display: flex;
+  align-items: center;
+}
+
+.promtww {
+  border: 1px solid #1b1b1b;
+  border-radius: 15px;
+  padding: 80px;
+  height: 350px;
+  background-color: #1b1b1b;
+  display: flex;
+  align-items: center;
+}
+
+.promth {
+  border: 1px solid #1b1b1b;
+  border-radius: 15px;
+  padding: 80px;
+  height: 200px;
+  background-color: #1b1b1b;
+}
+
+.promothh {
+  border: 1px solid #1b1b1b;
+  border-radius: 15px;
+  padding: 80px;
+  height: 200px;
+  background-color: #1b1b1b;
+}
+
+.prothree {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.background-footer img {
+  /* position: absolute; изменено на absolute */
+  width: 100%;
+  height: auto;
+}
+
+.backf {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  background-color: #1f1f1f;
+}
+
+.card-search {
+  width: 750px;
+  height: 580px;
+  /* padding: 150px; */
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+  padding: 50px;
+  background-color: #1f1f1f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.adrr {
+  display: flex;
+  gap: 10px;
+}
+
+.tell {
+  display: flex;
+  gap: 10px;
+}
+
+.adr p {
+  opacity: 30%;
+}
+
+.tel p {
+  opacity: 30%;
+}
+
+.how-search {
+  display: flex;
+  justify-content: start;
+  font-size: 64px;
+}
+
+.button-br {
+  display: flex;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #fff;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-br a {
+  text-decoration: none;
+  color: #e637b7;
+}
