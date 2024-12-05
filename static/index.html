@@ -120,24 +120,4 @@
       </div>
     </footer>
   </body>
-  <script>
-    document.querySelector('.enter').addEventListener('click', async () => {
-      const username = document.querySelector('input[placeholder="Username"]').value;
-      const password = document.querySelector('input[placeholder="Password"]').value;
-  
-      const response = await fetch('/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
-      });
-  
-      if (response.ok) {
-        const user = await response.json();
-        document.querySelector('#reg').innerText = 'Вы в аккаунте';
-      } else {
-        alert('Login failed.');
-      }
-    });
-  </script>
-  
 </html>

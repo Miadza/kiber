@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="./css/style-registration.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="background">
+        <img class="img1" src="./image/background.svg" alt="" />
+      </div>
+      <div class="bold-line"></div>
+      <div class="container">
+        <div class="window">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="welcome">Hello There!</div>
+            <div class="subtitle">
+              We're almost done. Before using our services you need to create an
+              account.
+            </div>
+            <form method="POST" action="http://localhost:8080/register">
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                required
+              />
+              <input type="email" name="email" placeholder="Email" required />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <button type="submit">Create Account</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
